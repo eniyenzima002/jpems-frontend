@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      'api': {
+      '/api': {
         target: 'https://jpems-api.vercel.app',
         changeOrigin: true
       },
