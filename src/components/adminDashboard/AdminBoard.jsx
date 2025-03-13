@@ -18,7 +18,7 @@ const AdminBoard = () => {
         const fetchSummary = async () => { 
             // setLoading(true)
             try {
-                const summary = await axios.get("http://localhost:3001/api/dashboard/summary", {
+                const summary = await axios.get("/api/dashboard/summary", {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }

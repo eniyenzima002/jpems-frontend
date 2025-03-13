@@ -31,7 +31,7 @@ const EditEmp = () => {
       const fetchEmployee = async () => { 
         // setLoading(true)
         try {
-            const response = await axios.get(`http://localhost:3001/api/employee/${id}`, {
+            const response = await axios.get(`/api/employee/${id}`, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
                 }

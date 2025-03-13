@@ -26,7 +26,7 @@ const Settings = () => {
         } else {
             try {
                 const response = await axios.put(
-                        "http://localhost:3001/api/settings/change-password",
+                        "/api/settings/change-password",
                         settings, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,

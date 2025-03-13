@@ -19,7 +19,7 @@ const Employees = () => {
         const fetchEmployees = async () => { 
             setEmpLoading(true)
             try {
-                const response = await axios.get("http://localhost:3001/api/employee", {
+                const response = await axios.get("/api/employee", {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }
@@ -34,7 +34,7 @@ const Employees = () => {
                             depart: employee.department.depart,
                             name: employee.userId.name,
                             dob: new Date(employee.dob).toLocaleDateString(),
-                            profileImage: <img src={`http://localhost:3001/${employee.userId.profileImage}`} className="rounded-full h-12 w-12 object-cover border" />,
+                            profileImage: <img src={`https://jpems-api.vercel.app/${employee.userId.profileImage}`} className="rounded-full h-12 w-12 object-cover border" />,
                             action: (<EmployeeActionsButtons _id={employee._id} onDeleteEmployee={ onDeleteEmployee } />)
                         }
                     ))

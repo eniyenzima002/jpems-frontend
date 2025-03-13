@@ -21,7 +21,7 @@ const AddInquire = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3001/api/inquire/add", inquire, {
+            const response = await axios.post("/api/inquire/add", inquire, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }

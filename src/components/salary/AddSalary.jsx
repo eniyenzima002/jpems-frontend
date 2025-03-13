@@ -40,7 +40,7 @@ const AddSalary = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:3001/api/salary/add`, salary, {
+            const response = await axios.post(`/api/salary/add`, salary, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }

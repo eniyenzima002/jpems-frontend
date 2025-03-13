@@ -13,7 +13,7 @@ const InquireDetail = () => {
         const fetchInquire = async () => { 
             // setLoading(true)
             try {
-                const response = await axios.get(`http://localhost:3001/api/inquire/detail/${id}`, {
+                const response = await axios.get(`/api/inquire/detail/${id}`, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }
@@ -38,7 +38,7 @@ const InquireDetail = () => {
 
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`http://localhost:3001/api/inquire/${id}`, { status }, {
+            const response = await axios.put(`/api/inquire/${id}`, { status }, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
                 }
@@ -67,7 +67,7 @@ const InquireDetail = () => {
                 <div className="border w-1/3 lg:w-1/4 bg-slate-300">
                 { inquiry.employeeId.userId.profileImage === null ? (
                     <img
-                        src={`http://localhost:3001/${inquiry.employeeId.userId.profileImage}`}
+                        src={`https://jpems-api.vercel.app/${inquiry.employeeId.userId.profileImage}`}
                         className="object-cover w-full h-full"
                     />
                     

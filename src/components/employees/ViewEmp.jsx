@@ -11,7 +11,7 @@ const ViewEmp = () => {
         const fetchEmployee = async () => { 
             // setLoading(true)
             try {
-                const response = await axios.get(`http://localhost:3001/api/employee/${id}`, {
+                const response = await axios.get(`/api/employee/${id}`, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }
@@ -44,7 +44,7 @@ const ViewEmp = () => {
                 <div className="border w-1/4 bg-slate-300">
                 { employee.userId.profileImage === null ? (
                     <img
-                        src={`http://localhost:3001/${employee.userId.profileImage}`}
+                        src={`https://jpems-api.vercel.app/${employee.userId.profileImage}`}
                         className="object-cover w-full h-full"
                     />
                     
