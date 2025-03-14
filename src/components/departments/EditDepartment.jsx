@@ -16,7 +16,7 @@ const EditDepartment = () => {
             setEditDepartLoading(true)
 
             try {
-                const response = await axios.get(`/api/department/${id}`, {
+                const response = await axios.get(`https://jpems-api.vercel.app/api/department/${id}`, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }

@@ -21,7 +21,7 @@ const AddInquire = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("/api/inquire/add", inquire, {
+            const response = await axios.post("https://jpems-api.vercel.app/api/inquire/add", inquire, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }

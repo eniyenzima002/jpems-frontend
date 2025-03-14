@@ -19,7 +19,7 @@ const Employees = () => {
         const fetchEmployees = async () => { 
             setEmpLoading(true)
             try {
-                const response = await axios.get("/api/employee", {
+                const response = await axios.get("https://jpems-api.vercel.app/api/employee", {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }

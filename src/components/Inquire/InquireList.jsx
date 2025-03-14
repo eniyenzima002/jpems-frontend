@@ -13,7 +13,7 @@ const InquireList = () => {
     useEffect(() => {
         const fetchInquire = async () => {
             try {
-                const response = await axios.get(`/api/inquire/${id}/${user.role}`, {
+                const response = await axios.get(`https://jpems-api.vercel.app/api/inquire/${id}/${user.role}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     }

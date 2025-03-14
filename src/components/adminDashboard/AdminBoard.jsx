@@ -18,7 +18,7 @@ const AdminBoard = () => {
         const fetchSummary = async () => { 
             // setLoading(true)
             try {
-                const summary = await axios.get("/api/dashboard/summary", {
+                const summary = await axios.get("https://jpems-api.vercel.app/api/dashboard/summary", {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }

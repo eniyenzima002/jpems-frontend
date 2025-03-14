@@ -26,7 +26,7 @@ const Settings = () => {
         } else {
             try {
                 const response = await axios.put(
-                        "/api/settings/change-password",
+                        "https://jpems-api.vercel.app/api/settings/change-password",
                         settings, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,

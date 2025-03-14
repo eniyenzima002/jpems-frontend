@@ -41,7 +41,7 @@ const AddEmp = () => {
         })
 
         try {
-            const response = await axios.post("/api/employee/add", formDataObj, {
+            const response = await axios.post("https://jpems-api.vercel.app/api/employee/add", formDataObj, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }

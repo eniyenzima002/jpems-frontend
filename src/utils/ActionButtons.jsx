@@ -6,14 +6,12 @@ import { useNavigate } from "react-router-dom";
 export const DepartmentActionsButtons = ({ _id, onDeleteDepart }) => {
     const navigate = useNavigate();
 
-    
-    
     const handleDelete = async (id) => {
         const confirm = window.confirm("Delete! Are you sure?");
 
         if (confirm) {
                 try {
-                    const response = await axios.delete(`/api/department/${id}`, {
+                    const response = await axios.delete(`https://jpems-api.vercel.app/api/department/${id}`, {
                         headers: {
                             "Authorization" : `Bearer ${localStorage.getItem("token")}`
                         }
@@ -112,14 +110,6 @@ export const InquireButtons = ({ _id }) => {
             >
                 <FaEye />
             </button>
-
-            
-            {/* <button
-                className="px-4 py-2 rounded text-slate-100 bg-red-600"
-                onClick={() => handleDelete(_id)}
-            >
-                <FaRegTrashAlt />
-            </button> */}
 
         </div>
     )

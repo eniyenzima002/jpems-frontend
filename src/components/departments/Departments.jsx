@@ -17,7 +17,7 @@ const Departments = () => {
     const fetchDepartments = async () => { 
         setDepLoading(true)
         try {
-            const response = await axios.get("/api/department", {
+            const response = await axios.get("https://jpems-api.vercel.app/api/department", {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
                 }

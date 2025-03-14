@@ -38,7 +38,7 @@ const InquireDetail = () => {
 
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`/api/inquire/${id}`, { status }, {
+            const response = await axios.put(`https://jpems-api.vercel.app/api/inquire/${id}`, { status }, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
                 }
