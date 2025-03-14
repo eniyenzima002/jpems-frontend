@@ -13,7 +13,7 @@ const InquireDetail = () => {
         const fetchInquire = async () => { 
             // setLoading(true)
             try {
-                const response = await axios.get(`/api/inquire/detail/${id}`, {
+                const response = await axios.get(`https://jpems-api.vercel.app/api/inquire/detail/${id}`, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem("token")}`
                     }
