@@ -4,6 +4,7 @@ import { EmployeeActionsButtons } from "../../utils/ActionButtons"
 import axios from "axios"
 import DataTable from "react-data-table-component"
 import { columns } from "../../utils/EmployeeHelper"
+import PImage from "../../assets/p.png"
 
 const Employees = () => {
     const [employees, setEmployees] = useState([])
@@ -34,7 +35,7 @@ const Employees = () => {
                             depart: employee.department.depart,
                             name: employee.userId.name,
                             dob: new Date(employee.dob).toLocaleDateString(),
-                            profileImage: <img src={`https://jpems-api.vercel.app/${employee.userId.profileImage}`} className="rounded-full h-12 w-12 object-cover border" />,
+                            profileImage: <img src={PImage} className="rounded-full h-12 w-12 object-cover border" />,
                             action: (<EmployeeActionsButtons _id={employee._id} onDeleteEmployee={ onDeleteEmployee } />)
                         }
                     ))
@@ -60,7 +61,7 @@ const Employees = () => {
         const records = employees.filter((emp) => emp.name.toLowerCase().includes(e.target.value.toLowerCase()));
         setFilteredEmployees(records);
     }
-    // console.log("From Employee", employees)
+    // console.log("From Employee", employees) => `https://jpems-api.vercel.app/${employee.userId.profileImage}`
     return (
         <>
             {empLoading ? <div>Loading...</div> : 
